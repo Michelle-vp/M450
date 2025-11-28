@@ -1,0 +1,67 @@
+# Task 1
+
+What forms of tests do you know from computer science?
+Work in pairs and explain at least three examples that you know from practice.
+How are the tests performed?
+# Task 2
+
+Give an example of a SW error and a SW deficiency.
+Give an example of a high damage in the event of a SW error.
+# Task 3
+
+Software is usually divided into a number of subsystems, which in turn consist of a large number of elementary
+components. We saw in the V model that there are different test levels. In this year, we want to
+context now look at an example of the lowest level.
+Example test in the price calculation class
+In the car sales software, prices are provided with discounts.
+We have the following elements and rules:
+There is a base price, minus the dealer discount.
+In addition, there is a special model surcharge (specialprice) and the price for additional equipment (extraprice).
+If three or more extras are selected, then a discount of 10% will be applied to them
+Kits. If there are five or more additional equipment, then the discount is 15%.
+The dealer discount refers to the base price. The accessory discount applies only to the price of the accessories.
+A code would thus look like this:
+
+`
+
+        double calculatePrice(double baseprice, double specialprice, double extraprice, int extras, double discount) {
+            double addon_discount;
+            double result;
+            
+            if (extras >= 3) 
+                addon_discount = 10;
+            else if (extras >= 5)
+                addon_discount = 15;
+            else 
+                addon_discount = 0;
+            
+            if (discount > addon_discount)
+                addon_discount = discount;
+            
+            result = baseprice/100.0 * (100-discount) + specialprice
+                    + extraprice/100.0 * (100-addon_discount);
+            
+            return result;
+	    }
+
+`
+
+Implement this code in your developer environment. Now create a corresponding test driver to test this price calculation. A test driver is a program that executes the respective interface calls (method call) and then receives the result back. Sketchily, it would look like this:
+
+`
+    
+    boolean test_calculate_price(){
+
+        double price;
+        boolean test_ok = true;
+    
+        < your code>
+
+    }
+`
+
+Attention: We do not write unit tests here. We will apply unit tests later in the module.
+Put your tests in the repository and show your solution to the teacher.
+Task 3 - Bonus
+
+The program piece is faulty ;) Find the error in the code. What would have to be corrected?
