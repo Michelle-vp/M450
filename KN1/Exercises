@@ -1,14 +1,13 @@
 # Task 1
-
 What forms of tests do you know from computer science?
 Work in pairs and explain at least three examples that you know from practice.
 How are the tests performed?
-# Task 2
 
+# Task 2
 Give an example of a SW error and a SW deficiency.
 Give an example of a high damage in the event of a SW error.
-# Task 3
 
+# Task 3
 Software is usually divided into a number of subsystems, which in turn consist of a large number of elementary
 components. We saw in the V model that there are different test levels. In this year, we want to
 context now look at an example of the lowest level.
