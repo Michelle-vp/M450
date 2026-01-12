@@ -8,6 +8,19 @@ How are the tests performed?
 # Task 2
 Give an example of a SW error and a SW deficiency.
 Give an example of a high damage in the event of a SW error.
+### SW error
+Example: 
+
+	if (extras >= 3)
+	    addon_discount = 10;
+	else if (extras >= 5)
+	    addon_discount = 15;
+#### SW error (high damage)
+I'm going to use the previous example as the one for this. If we contextualize and specify that the addons are addons for cars, if the client buys 5 or more they are being overcharged.
+### SW deficency
+Example: 
+
+	calculatePrice(20000, 1000, 2000, -2, -50);
 
 # Task 3
 Software is usually divided into a number of subsystems, which in turn consist of a large number of elementary
@@ -22,8 +35,6 @@ If three or more extras are selected, then a discount of 10% will be applied to 
 Kits. If there are five or more additional equipment, then the discount is 15%.
 The dealer discount refers to the base price. The accessory discount applies only to the price of the accessories.
 A code would thus look like this:
-
-`
 
         double calculatePrice(double baseprice, double specialprice, double extraprice, int extras, double discount) {
             double addon_discount;
@@ -45,11 +56,9 @@ A code would thus look like this:
             return result;
 	    }
 
-`
 
 Implement this code in your developer environment. Now create a corresponding test driver to test this price calculation. A test driver is a program that executes the respective interface calls (method call) and then receives the result back. Sketchily, it would look like this:
 
-`
     
     boolean test_calculate_price(){
 
@@ -59,7 +68,6 @@ Implement this code in your developer environment. Now create a corresponding te
         < your code>
 
     }
-`
 
 Attention: We do not write unit tests here. We will apply unit tests later in the module.
 Put your tests in the repository and show your solution to the teacher.
