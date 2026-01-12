@@ -2,7 +2,12 @@
 What forms of tests do you know from computer science?
 Work in pairs and explain at least three examples that you know from practice.
 How are the tests performed?
-
+- Unit test
+Unitests test one small piece of code.It calls the method, compares actual and what's expected.
+- Integration test
+Integration tests tests multiple components working together such as service and database. We run the app with real or test DB and we verify outcomes as for example API responses.
+- E2E
+E2E tests the whole system like a user would use it.It launches full system, run automated browser tests (i know Playwright).
 # Task 2
 Give an example of a SW error and a SW deficiency.
 Give an example of a high damage in the event of a SW error.
