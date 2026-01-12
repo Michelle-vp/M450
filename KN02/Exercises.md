@@ -52,6 +52,17 @@ Create a table with these test cases as Markdown and put it in your repository. 
 |----|---------------------------|-------------------------------------------------------|------------------------------------------|--------|-----------------------------------|
 | 1  | Program starts correctly  | After calling the program on the console, a window opens. | Program crashes with error X00234         | Errors | Access to DB server may not be possible |
 
+Used: Enterprise Rent-A-Car
+Table:
+
+| ID | Description | Expected result | Effective result | Status | Possible cause |
+|----|------------|-----------------|------------------|--------|----------------|
+| 1 | Search for available cars with valid input | After entering a valid pickup location, pickup date/time and return date/time, a list of available vehicles with prices is displayed. | Available vehicle categories with prices were shown correctly. | Pass | — |
+| 2 | Validate incorrect date input | If the return date/time is earlier than the pickup date/time, the system should display an error message and prevent the search. | An error message was displayed and the search could not be continued. | Pass | — |
+| 3 | Price calculation with extras | When adding optional extras (e.g. child seat), the total price should update correctly and display all costs transparently. | The total price updated immediately and all costs were shown correctly. | Pass | — |
+| 4 | Complete booking process | After entering customer details and confirming the booking, a confirmation page with a reservation number should be displayed. | Booking was completed successfully and a confirmation with reservation number was shown. | Pass | — |
+| 5 | View or cancel an existing reservation | Using the reservation number and personal details, the user should be able to view and cancel a reservation. | Reservation was found and cancellation option was available and worked. | Pass | — |
+
 ---
 
 ## Exercise 3
