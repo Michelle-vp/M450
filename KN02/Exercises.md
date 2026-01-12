@@ -14,7 +14,27 @@ We have the following description of a sales software:
 Derive test cases from this description. We want to examine both variants of test cases.
 
 - A table of abstract test cases. Here you use logical operators such as `>`, `<`, etc.
+  
+| ID | Purchase price condition | Expected discount |
+|----|--------------------------|------------------|
+| A1 | `price < 15000`          | 0%               |
+| A2 | `15000 ≤ price ≤ 20000`  | 5%               |
+| A3 | `20000 < price < 25000`  | 7%               |
+| A4 | `price ≥ 25000`          | 8.5%             |
+
 - A table with concrete test cases. Here you use very specific input values to create the test cases.
+  
+| ID | Purchase price (CHF) | Reason for selection           | Expected discount |
+|----|----------------------|--------------------------------|------------------|
+| C1 | 14'999               | Just below the minimum of 5%   | 0%               |
+| C2 | 15'000               | Exactly minimum price 5%       | 5%               |
+| C3 | 16'000               | Middle of range of 5%          | 5%               |
+| C4 | 20'000               | Exactly maximum price 5%       | 5%               |
+| C5 | 20'001               | Just above the minimum of 7%   | 7%               |
+| C6 | 22'000               | Middle of range of 7%          | 7%               |
+| C7 | 24'999               | Just below the minimum of 8.5% | 7%               |
+| C8 | 25'000               | Exactly minimum price 8.5%     | 8.5%             |
+| C9 | 30'000               | In range of 8.5%               | 8.5%             |
 
 ---
 
