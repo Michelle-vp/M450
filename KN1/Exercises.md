@@ -74,3 +74,15 @@ Put your tests in the repository and show your solution to the teacher.
 Task 3 - Bonus
 
 The program piece is faulty ;) Find the error in the code. What would have to be corrected?
+So the error is what i used as SW error
+
+	if (extras >= 3) addon_discount = 10;
+	else if (extras >= 5) addon_discount = 15;
+
+Wich makes the 15 discount never happen. On top of that there's this piece of code that isn't correct.
+
+	if (discount > addon_discount)
+	    addon_discount = discount;
+
+Which basicaly says that if the dealer discount is higher than the extras discount,
+then use the dealer discount for the extras. The dealer discount must only affect the base price, while the accessory discount depends solely on the number of extras.
